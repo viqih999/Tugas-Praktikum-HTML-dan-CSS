@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>Contoh Inheritance dalam CSS</title>
+            <!--Inheritance dalam CSS adalah sifat penurunan efek CSS dari sebuah tag 
+                HTML kepada tag HTML lainnya. Syarat untuk inheritance adalah: tag tersebut 
+                harus berada di dalam tag lainnya.
+            -->
+            <style type="text/css">
+            
+            div.satu {
+            
+            border: 1px solid black;
+            
+            color: blue;
+            
+            }
+            
+            div.dua {
+            
+            border: 1px solid black;
+            
+            }
+            
+            p.dua {
+            
+            border: inherit;
+            
+            }
+            
+            </style>
+    </head>
+    <body>
+        <!-- disini memanggil div class satu yang berada dalam tag style-->
+        <div class="satu">
+        
+        <p class="satu">
+        
+        Kalimat ini tanpa <em class="satu">nilai property 
+        inherit</em> CSS
+        
+        </p>
+        
+        </div>
+        
+        <br />
+        <!-- diisni div class dua menjadi induk dari p class dua dan hasil tetap mengikuti induknya-->
+        <div class="dua">
+        
+        <p class="dua">
+        
+        Kalimat ini menggunakan <em class="dua">nilai property 
+        inherit</em> CSS
+        
+        </p>
+        
+        </div>
+    </body>
+</html>

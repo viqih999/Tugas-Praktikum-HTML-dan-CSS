@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <title>Contoh Kasus Cascading CSS</title>
+            <!-- disini kita memanggil file css yang kita beri nama prioritas.css yang dimana 
+            berisi kode <h2> blue, yaitu setiap yg menggunakan tag <h2> maka akan berwarna biru-->
+            <link rel="stylesheet" type="text/css" 
+            href="prioritas.css">
+ 
+                <!-- tetapi dsinilah yang dinamakan prioritas itu terjadi, dimana jika dalam masalah timpa
+                menimpa css memiliki aturan sendiri yaitu 
+                *Inline style, yakni style yang langsung melekat pada tag.
+                *Internal style, yakni style yang dideklarasikan pada awal halaman (tag <style>)
+                *Eksternal style, yakni style yang dideklarasikan pada sebuah file .css , dan 
+                dipanggil melalui tag <link> atau @import
+                
+            maka yang menang adalah color red, karena berada dlam inline style, sedangkan color blue kalah
+        karena berada dalam eksternal style-->
+        <style type="text/css">
+        
+        h2 {
+        
+        color:red;
+        
+        }
+        
+        </style>
+</head>
+    <body>
+ 
+        <h2>
+        
+        Akan berwarna apa saya?..1
+        
+        </h2>
+        
+        <h2 style="color:green">
+        
+        Akan berwarna apa saya?..2
+        
+        </h2>
+    </body>
+</html>
